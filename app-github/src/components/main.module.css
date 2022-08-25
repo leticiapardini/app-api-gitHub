@@ -1,0 +1,41 @@
+.containerMain{
+  position: relative;
+  position: relative;
+  width: 100%;
+  background: 	#B0E0E6;
+  height: 50%;
+  margin-top: 17%;
+  display: grid;
+  justify-content: space-between;
+  justify-items: self-start;
+  grid-template-columns: 1fr 1fr;
+  border: 3px solid 	#008B8B;
+  margin-left: 60px;
+}
+
+.photo {
+  width: 170px;
+  border-radius: 50%;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.description {
+  grid-column-start: 1;
+  width: 170px;
+  background: #B0E0E6;
+  margin-left: 54px;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.followers {
+  grid-column-start: 1;
+  width: 170px;
+  background: #B0E0E6;
+  margin-left: 54px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
