@@ -11,3 +11,14 @@ export interface APIUser{
   email?: string;
   location: string;
 }
+
+export interface APIRepo{
+  name: string;
+  owner: {
+      login: string;
+  };
+  stargazers_count: number;
+  forks: number;
+  html_url: string;
+  description?: string;
+}

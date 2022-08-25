@@ -1,8 +1,9 @@
 import React from 'react'
-import { Main } from './components/main'
+import 'antd/dist/antd.css';
+import { RoutesApp } from './pages/Routes'
 
 function App() {
-  return (<Main/>)
+  return (<RoutesApp/>)
 }
 
 export default App

@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-const edpointApi = axios.create({
+const endpointApi = axios.create({
   baseURL: "https://api.github.com/users"
 });
 
-export { edpointApi };
+
+export { endpointApi };
