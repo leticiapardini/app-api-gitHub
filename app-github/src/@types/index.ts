@@ -14,6 +14,7 @@ export interface APIUser{
 
 export interface APIRepo{
   name: string;
+  id?:number,
   owner: {
       login: string;
   };
