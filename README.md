@@ -14,7 +14,7 @@ The following tools were used in building the project:
 # Clone the following repositories
 git clone https://github.com/leticiapardini/app-api-gitHub.git
 
-# Enter an IDE of your choice and run the command:
+# Open any IDE of your choice and run the command:
 
 OBS: make sure you are in the correct folder path
 
@@ -27,6 +27,6 @@ npm start
 ```
 
 Once this is done, open your browser and access `http://localhost:3000/`
-or at a port of your choice.
+
 
 or access deploy link : https://app-api-git.vercel.app/
