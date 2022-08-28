@@ -2,27 +2,25 @@
   position: relative;
   position: relative;
   width: 90%;
-  background: 	#B0E0E6;
   height: 100vh;
-  margin-top: 17%;
+  margin-top: 2%;
   display: grid;
   justify-content: space-between;
   justify-items: self-start;
   grid-template-columns: 1fr 1fr;
-  border: 3px solid 	#008B8B;
+  border: 5px solid var(--border-color);
   margin-left: 60px;
+
 }
 
 .containerGridOne{
   position: relative;
   width: 100%;
-  background: 	#B0E0E6;
   height: 0%;
-  margin-top: 17%;
+  padding-top:10%;
   display: grid;
-  justify-content: space-between;
-  justify-items: self-start;
-  margin-left: 60px;
+  justify-content: center;
+  justify-items: center;
   grid-column-start: 1;
   
 }
@@ -37,32 +35,62 @@
 .description {
   grid-column-start: 1;
   width: 170px;
-  background: #B0E0E6;
   margin-left: 54px;
   margin-top: 10px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
+  color: var(--title-color);
 }
 
 .followers {
   grid-column-start: 1;
   width: 170px;
-  background: #B0E0E6;
   margin-left: 54px;
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
+  color: var(--title-color);
 }
 
 .repo{
-  background: #B0E0E6;
+  background: var(--button-color-secund);
+  display: initial;
+  margin-left: 2px;
+  border-radius: 7px;
+  margin-top: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  color: var(--text-color);
 }
 
 .containerGridTwo{
-  background: #B0E0E6;
   grid-column-start: 2;
 }
 
 .titleRepo{
-  background: #B0E0E6;
+  margin-top: 100px;
+  display: grid;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  color: var(--title-color);
+  font-weight: bold;
+}
+
+.repo:hover{
+  background-color: var(--button-color-hoot);
+  color: var(--white);
+}
+
+@media (max-width: 750px) {
+  .containerMain {
+    display: contents;
+  }
+
+
+  .containerGridTwo{
+    margin-left: 15%;
+  }
 }

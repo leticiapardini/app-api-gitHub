@@ -1,0 +1,23 @@
+.Card {
+  padding: 0;
+  background-color:#D8BFD8;
+
+}
+
+.buttonReturn{
+  background: #5F9EA0;
+  color: #fff;
+  font-size: 20px;
+  border: 30px;
+  border-radius: 7px;
+  height: 50px;
+  cursor: pointer;
+  margin-left: 2%;
+  width: 95%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.buttonReturn:hover{
+  background-color: var(--button-color-hoot);
+}

@@ -23,3 +23,23 @@ export interface APIRepo{
   html_url: string;
   description?: string;
 }
+
+export interface APICommit {
+  sha: string;
+  node_id: string;
+  commit:{
+    author: {
+      name: string,
+      email: string,
+      date: string
+    }
+
+    committer: {
+      name: string,
+      email: string,
+      date: string
+    }
+    message: string
+  }
+  
+}

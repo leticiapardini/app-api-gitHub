@@ -1,4 +1,17 @@
+
 * {
   margin: 0;
   background-color:#D8BFD8;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root{
+  --title-color:  #2F4F4F;
+  --white: #fff;
+  --text-color: #696969;
+  --text-color-light: #707070;
+  --border-color:#008B8B;
+  --button-color: #5F9EA0;
+  --button-color-secund: (176,224,230,0.8);
+  --button-color-hoot: #707070
 }
