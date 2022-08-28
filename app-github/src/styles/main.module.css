@@ -85,10 +85,10 @@
 }
 
 @media (max-width: 750px) {
+  
   .containerMain {
     display: contents;
   }
-
 
   .containerGridTwo{
     margin-left: 15%;

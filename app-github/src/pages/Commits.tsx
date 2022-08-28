@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { endpointApi } from "../integrations/apiGitHub";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { APICommit } from "../@types";
 import { Card, Empty } from "antd";
 import { collect } from "collect.js";
-import { GithubOutlined } from "@ant-design/icons";
 import styles from "../styles/commit.module.css";
 
 const Commit = () => {
@@ -38,22 +37,24 @@ const Commit = () => {
       >
         Página Inicial
       </button>
-      {commitPerformed
-        ? result.map((element) => {
-            return (
-              <Card
-                className={styles.Card}
-                title={"Commits do Repositório escolhido"}
-                key={element.sha}
-              >
-                <p> Autor: {element.commit.author.name}</p>
-                <p> Email: {element.commit.author.email}</p>
-                <p> Data: {element.commit.author.date}</p>
-                <p> Mensagem: {element.commit.message}</p>
-              </Card>
-            );
-          })
-        : (<Empty description="Esse repósitório não possui commits" />)}
+      {commitPerformed ? (
+        result.map((element) => {
+          return (
+            <Card
+              className={styles.Card}
+              title={"Commits do Repositório escolhido"}
+              key={element.sha}
+            >
+              <p> Autor: {element.commit.author.name}</p>
+              <p> Email: {element.commit.author.email}</p>
+              <p> Data: {element.commit.author.date}</p>
+              <p> Mensagem: {element.commit.message}</p>
+            </Card>
+          );
+        })
+      ) : (
+        <Empty description="Esse repósitório não possui commits" />
+      )}
     </>
   );
 };
