@@ -1,11 +1,14 @@
 .Card {
   padding: 0;
   background-color:#D8BFD8;
+  border: 3px solid var(--button-color);
+  color: var(--title-color);
+  border-radius: 5px;
 }
 
 .buttonReturn{
-  background: #5F9EA0;
-  color: #fff;
+  background: var(--button-color);
+  color: var(--white);
   font-size: 20px;
   border: 30px;
   border-radius: 7px;
@@ -19,4 +22,35 @@
 
 .buttonReturn:hover{
   background-color: var(--button-color-hoot);
+}
+
+.col{
+  background-color: var(--button-color);
+  margin-left: 25%;
+  margin-bottom: 3%;
+
+}
+
+.author{
+  margin-left: 26%;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.titleCommit{
+  margin-left: 35%;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--title-color);
+}
+
+@media (max-width: 750px) {
+  .col {
+    display: inline;
+  }
+
+  .titleCommit{
+    margin-left: 10%;
+    font-size: 18px;
+  }
 }

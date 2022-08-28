@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { endpointApi } from "../integrations/apiGitHub";
 import { useNavigate } from "react-router-dom";
 import { APICommit } from "../@types";
-import { Card, Empty } from "antd";
+import { Card, Col, Empty, Row } from "antd";
 import { collect } from "collect.js";
 import styles from "../styles/commit.module.css";
 
@@ -37,19 +37,23 @@ const Commit = () => {
       >
         Página Inicial
       </button>
+      <p className={styles.titleCommit}> Commits do Repositório escolhido</p>
       {commitPerformed ? (
         result.map((element) => {
           return (
+      
+          <Col className={styles.col} span={12}>
             <Card
               className={styles.Card}
-              title={"Commits do Repositório escolhido"}
               key={element.sha}
             >
-              <p> Autor: {element.commit.author.name}</p>
-              <p> Email: {element.commit.author.email}</p>
+              <p className={styles.author}> Autor: {element.commit.author.name}</p>
+              <p> E-mail: {element.commit.author.email}</p>
               <p> Data: {element.commit.author.date}</p>
               <p> Mensagem: {element.commit.message}</p>
             </Card>
+            </Col>
+           
           );
         })
       ) : (

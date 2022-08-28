@@ -5,6 +5,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.body{
+  background-color:#D8BFD8;
+}
+
 :root{
   --title-color:  #2F4F4F;
   --white: #fff;
