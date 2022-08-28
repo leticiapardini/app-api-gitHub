@@ -10,7 +10,7 @@ export interface APIUser{
   company?: string;
   email?: string;
   location: string;
-}
+};
 
 export interface APIRepo{
   name: string;
@@ -22,7 +22,7 @@ export interface APIRepo{
   forks: number;
   html_url: string;
   description?: string;
-}
+};
 
 export interface APICommit {
   sha: string;
@@ -33,13 +33,11 @@ export interface APICommit {
       email: string,
       date: string
     }
-
     committer: {
       name: string,
       email: string,
       date: string
     }
     message: string
-  }
-  
-}
+  }  
+};

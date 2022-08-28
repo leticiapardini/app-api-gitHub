@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { endpointApi } from "../integrations/apiGitHub";
 import { Link, useNavigate } from "react-router-dom";
 import { APICommit } from "../@types";
-import { Card } from "antd";
+import { Card, Empty } from "antd";
 import { collect } from "collect.js";
 import { GithubOutlined } from "@ant-design/icons";
 import styles from "../styles/commit.module.css";
@@ -26,7 +26,6 @@ const Commit = () => {
 
   const colection = collect(commitPerformed);
   const result = colection.take(10);
-  console.log(result, "result");
   return (
     <>
       <button
@@ -54,7 +53,7 @@ const Commit = () => {
               </Card>
             );
           })
-        : ""}
+        : (<Empty description="Esse repósitório não possui commits" />)}
     </>
   );
 };

@@ -5,8 +5,6 @@ import styles from "../styles/main.module.css";
 import { Empty } from "antd";
 import { Input } from "./input";
 import { useNavigate } from "react-router-dom";
-import { GithubOutlined } from "@ant-design/icons";
-
 
 const Main = () => {
   const [nameUser, setNameUser] = useState<string>("");
@@ -14,13 +12,12 @@ const Main = () => {
   const [returnApi, setReturnApi] = useState<APIUser>();
   const [returnApiRepos, setReturnApiRepos] = useState<APIRepo[]>([]);
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     const data = endpointApi
       .get(`/users/${user}/repos`)
       .then((data) => {
         setReturnApiRepos(data.data);
-        console.log(data);
       })
       .catch((erro) => {
         console.error(erro, "erro");
@@ -32,7 +29,7 @@ const Main = () => {
       .get(`/users/${user}`)
       .then((data) => {
         setReturnApi(data.data);
-        localStorage.setItem('user', user);
+        localStorage.setItem("user", user);
       })
       .catch((erro) => {
         console.error(erro, "erro");
@@ -42,10 +39,8 @@ const Main = () => {
   const onClosenUser = (event: React.ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
     setUser(nameUser);
-    localStorage.setItem('user', user);
     setNameUser("");
   };
-  console.log(user, 'user')
   return (
     <>
       <Input
@@ -69,7 +64,10 @@ const Main = () => {
               </div>
             </div>
             <div className={styles.containerGridTwo}>
-              <span className={styles.titleRepo}> Repositórios Publicos, clique e saiba mais informações</span>
+              <span className={styles.titleRepo}>
+                {" "}
+                Repositórios Publicos, clique e saiba mais informações
+              </span>
               {returnApiRepos ? (
                 returnApiRepos.map((repo) => (
                   <div className={styles.repo} key={repo.html_url}>
@@ -77,7 +75,10 @@ const Main = () => {
                       className={styles.repo}
                       onClick={(event) => {
                         navigate("/commits");
-                        localStorage.setItem('repo', event.currentTarget.innerHTML);
+                        localStorage.setItem(
+                          "repo",
+                          event.currentTarget.innerHTML
+                        );
                       }}
                     >
                       {repo.name}
